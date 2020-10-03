@@ -8,7 +8,7 @@ SOURCE:=$(shell curl -s https://api.github.com/repos/flameshot-org/flameshot/rel
 
 all: clean
 	echo "Building: $(OUTPUT) $(TEST)"
-	wget --output-document=$(OUTPUT) --continue https://github.com/flameshot-org/packages/releases/download/v0.6.0/flameshot_0.6.0_x86_64.appimage	
+	wget --output-document=$(OUTPUT) --continue ${SOURCE}	
 	chmod +x $(OUTPUT)
 
 clean:
